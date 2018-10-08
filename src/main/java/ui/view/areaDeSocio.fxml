@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.AreaSocioController">
+   <top>
+      <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #4DB6AC;" BorderPane.alignment="TOP_RIGHT">
+         <children>
+            <JFXButton buttonType="RAISED" onMouseClicked="#buttonMiArea" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: WHITE;" text="Mi área">
+            <font>
+                  <Font size="14.0" />
+               </font>
+               </JFXButton>
+            <JFXButton buttonType="RAISED" onMouseClicked="#buttonCatalogo" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #263238;" text="Catálogo" textFill="WHITE">
+            <font>
+                  <Font size="14.0" />
+               </font>
+               </JFXButton>
+            <JFXButton buttonType="RAISED" onMouseClicked="#logOut" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #263238;" text="Cerrar sesión" textFill="WHITE">
+            <font>
+                  <Font size="14.0" />
+               </font>
+               </JFXButton>
+         </children>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </HBox>
+   </top>
+   <left>
+      <VBox alignment="TOP_CENTER" prefWidth="160.0" spacing="10.0" style="-fx-background-color: #263238;" BorderPane.alignment="CENTER">
+         <children>
+         <Label textFill="WHITE" fx:id="welcomeMessage" wrapText="true" >
+              <font>
+                 <Font name="System" size="20.0" />
+              </font>
+              <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+           </Label>
+            <JFXButton onMouseClicked="#buttonMisDatos" prefHeight="30.0" prefWidth="145.0" style="-fx-background-color: #4DB6AC;" text="Datos personales" >
+            <font>
+                  <Font size="14.0" />
+               </font></JFXButton>
+            <JFXButton onMouseClicked="#buttonCambiarContrasenya" prefHeight="30.0" prefWidth="145.0" style="-fx-background-color: #4DB6AC;" text="Cambiar contraseña" >
+            <font>
+                  <Font size="14.0" />
+               </font></JFXButton>
+            <JFXButton onMouseClicked="#buttonCambiarUsername" prefHeight="30.0" prefWidth="145.0" style="-fx-background-color: #4DB6AC;" text="Cambiar username" >
+            <font>
+                  <Font size="14.0" />
+               </font></JFXButton>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER">
+         <children>
+         	<Label text="Tus películas alquiladas" >
+              <font>
+                 <Font name="System" size="30.0" />
+              </font>
+              <padding>
+                        <Insets left="10.0" />
+               </padding>
+              </Label>
+               <Label fx:id="alquiladasComentario" text="Pulsa para ver, manten para devolver">
+ 
+               <font>
+                  <Font name="System" size="14.0" />
+               </font>
+               <padding>
+                        <Insets left="14.0" />
+                     </padding>
+            </Label>
+            <BorderPane>
+               <center>
+                  <JFXListView fx:id="listaPeliculasPendientes" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER" />
+               </center>
+               <padding>
+                        <Insets top="20.0" />
+                     </padding>
+            </BorderPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.PeliculasAdminController">
+   <top>
+      <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #4DB6AC;" BorderPane.alignment="TOP_RIGHT">
+         <children>
+         	<JFXButton buttonType="RAISED" onMouseClicked="#buttonMiArea" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #263238;" text="Mi área" textFill="WHITE">
+            <font>
+                  <Font size="14.0" />
+               </font>
+               </JFXButton>
+            <JFXButton buttonType="RAISED" onMouseClicked="#buttonSocios" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #263238;" text="Socios" textFill="WHITE">
+            <font>
+                  <Font size="14.0" />
+               </font>
+               </JFXButton>
+            <JFXButton buttonType="RAISED" onMouseClicked="#buttonPeliculas" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: WHITE;" text="Películas">
+            <font>
+                  <Font size="14.0" />
+               </font>
+               </JFXButton>
+            <JFXButton buttonType="RAISED" onMouseClicked="#logOut" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #263238;" text="Cerrar sesión" textFill="WHITE">
+            <font>
+                  <Font size="14.0" />
+               </font>
+               </JFXButton>
+         </children>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </HBox>
+   </top>
+   <center>
+      <JFXListView fx:id="listaPeliculas" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <JFXButton onMouseClicked="#altaPeli" alignment="CENTER" styleClass="animated-option-button" stylesheets="@../../resources/css/myStylesheet.css" text="+" BorderPane.alignment="CENTER_RIGHT">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets bottom="10.0" right="10.0" />
+         </BorderPane.margin>
+      </JFXButton>
+   </bottom>
+</BorderPane>

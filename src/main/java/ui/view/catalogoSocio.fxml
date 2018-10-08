@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.CatalogoSocioController">
+   <top>
+      <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #4DB6AC;" BorderPane.alignment="TOP_RIGHT">
+         <children>
+            <JFXButton buttonType="RAISED" onMouseClicked="#buttonMiArea" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #263238;" text="Mi área" textFill="WHITE">
+            <font>
+                  <Font size="14.0" />
+               </font>
+               </JFXButton>
+            <JFXButton buttonType="RAISED" onMouseClicked="#buttonCatalogo" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: WHITE;" text="Catálogo">
+            <font>
+                  <Font size="14.0" />
+               </font>
+               </JFXButton>
+            <JFXButton buttonType="RAISED" onMouseClicked="#logOut" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #263238;" text="Cerrar sesión" textFill="WHITE">
+            <font>
+                  <Font size="14.0" />
+               </font>
+               </JFXButton>
+         </children>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </HBox>
+   </top>
+   <left>
+      <VBox alignment="TOP_CENTER" prefWidth="160.0" spacing="10.0" style="-fx-background-color: #263238;" BorderPane.alignment="CENTER">
+         <children>
+         <Label text="Menú de búsqueda" textFill="WHITE" wrapText="true">
+              <font>
+                 <Font name="System" size="20.0" />
+              </font>
+              <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+           </Label>
+            <TextField fx:id="titleField" maxWidth="145.0" promptText="Título">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="anyoField" maxWidth="145.0" promptText="Año de estreno">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="actorField" maxWidth="145.0" promptText="Actor">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="directorField" maxWidth="145.0" promptText="Director">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <VBox fx:id="boxGeneros" alignment="TOP_LEFT" spacing="5.0">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin></VBox>
+            <JFXButton onMouseClicked="#buttonBuscar" prefHeight="30.0" prefWidth="145.0" style="-fx-background-color: #4DB6AC;" text="Buscar">
+            <font>
+                  <Font size="14.0" />
+               </font></JFXButton>
+            <JFXButton onMouseClicked="#buttonLimpiar" prefHeight="30.0" prefWidth="145.0" style="-fx-background-color: #4DB6AC;" text="Limpiar búsqueda">
+            <font>
+                  <Font size="14.0" />
+               </font></JFXButton>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <JFXListView fx:id="listaPeliculas" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

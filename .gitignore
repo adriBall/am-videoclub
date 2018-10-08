@@ -1,0 +1,11 @@
+.gradle/
+.settings/
+
+# Java build artifacts class files
+*.class
+.classpath
+.project
+
+# other generated files
+bin/
+build/

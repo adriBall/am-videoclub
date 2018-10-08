@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="720.0" onKeyPressed="#keySubmit" prefWidth="1080.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.CambiarContrasenyaController">
+   <top>
+      <BorderPane prefHeight="40.0" style="-fx-background-color: #4DB6AC;" BorderPane.alignment="CENTER">
+         <left>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+               	<JFXButton onMouseClicked="#goBack" prefHeight="32.0" prefWidth="32.0" text=" ">
+               	   <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0">
+                           <image>
+                              <Image url="@../../resources/arrow_back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </left>
+         <right>
+            <HBox alignment="CENTER_RIGHT" spacing="10.0" style="-fx-background-color: #4DB6AC;" BorderPane.alignment="TOP_RIGHT">
+         <children>
+            <JFXButton buttonType="RAISED" onMouseClicked="#buttonMiArea" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: WHITE;" text="Mi área">
+            <font>
+                  <Font size="14.0" />
+               </font>
+               </JFXButton>
+            <JFXButton buttonType="RAISED" onMouseClicked="#buttonCatalogo" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #263238;" text="Catálogo" textFill="WHITE">
+            <font>
+                  <Font size="14.0" />
+               </font>
+               </JFXButton>
+            <JFXButton buttonType="RAISED" onMouseClicked="#logOut" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #263238;" text="Cerrar sesión" textFill="WHITE">
+            <font>
+                  <Font size="14.0" />
+               </font>
+               </JFXButton>
+         </children>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </HBox>
+         </right>
+      </BorderPane>
+   </top>
+   <center>
+      <VBox spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox>
+               <children>
+            <Label text="Cambiar contraseña">
+                  <font>
+                     <Font size="30.0" />
+                  </font>
+                  <padding>
+                        <Insets left="10.0" />
+               </padding>
+               </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" spacing="5.0" VBox.vgrow="SOMETIMES">
+               <children>
+                  <HBox alignment="CENTER" spacing="10.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" focusTraversable="false" prefWidth="150.0" text="Contraseña actual">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="campoActual" editable="true" prefWidth="150.0" >
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </PasswordField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" spacing="10.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" focusTraversable="false" prefWidth="150.0" text="Contraseña nueva" textAlignment="RIGHT">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="campoNueva" editable="true" prefWidth="150.0" >
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </PasswordField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" spacing="10.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" focusTraversable="false" prefWidth="150.0" text="Repite la nueva" textAlignment="RIGHT">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="campoNuevaRepetida" editable="true" prefWidth="150.0" >
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </PasswordField>
+                     </children>
+                  </HBox>
+                  <Text fx:id="error" style="-fx-fill: rgb(213, 0, 0);" strokeType="OUTSIDE" strokeWidth="0.0" visible="false" />
+                  <HBox spacing="10.0" alignment="CENTER" prefHeight="70.0">
+                     <children>
+                        <JFXButton onMouseClicked="#aceptar" prefHeight="30.0" style="-fx-background-color: #4DB6AC;" text="Aceptar" >
+                        <font>
+                  <Font size="14.0" />
+               </font></JFXButton>
+                        <JFXButton onMouseClicked="#goBack" prefHeight="30.0" style="-fx-background-color: #4DB6AC;" text="Cancelar" >
+                        <font>
+                  <Font size="14.0" />
+               </font></JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>

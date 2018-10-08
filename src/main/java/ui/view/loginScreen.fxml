@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane onKeyPressed="#keySubmit" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #4DB6AC;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.LoginController">
+	<center>
+		<VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+			<children>
+            <ImageView fitHeight="243.0" fitWidth="300.0">
+               <image>
+                  <Image url="@../../resources/logo.png" />
+               </image>
+            </ImageView>
+	            <TextField fx:id="campoNombre" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" promptText="Nombre de usuario">
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+	            <PasswordField fx:id="campoContrasenya" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" promptText="Contraseña">
+               <font>
+                  <Font size="14.0" />
+               </font></PasswordField>
+	            <JFXButton alignment="CENTER" onMouseClicked="#buttonSubmit" style="-fx-background-color: #263238;" text="Log in" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXButton>
+	            <Text fx:id="error" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: rgb(213, 0, 0);" visible="false" />
+			</children>
+			<BorderPane.margin>
+	            <Insets top="40.0" />
+			</BorderPane.margin>
+		</VBox>
+	</center>
+	<bottom>
+		<Text strokeType="OUTSIDE" strokeWidth="0.0" text="EI1048 - Paradigmas de software" BorderPane.alignment="BOTTOM_LEFT">
+			<BorderPane.margin>
+				<Insets bottom="10.0" left="10.0" />
+			</BorderPane.margin>
+		</Text>
+	</bottom>
+</BorderPane>
