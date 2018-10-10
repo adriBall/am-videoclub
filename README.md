@@ -14,4 +14,4 @@ pass: socio
 
 ## Linux users
 
-JavaFX is not included in OpenJDK8. In this case, the packages `openjfx` and `ibopenjfx-java` are required in order to run this Java application.
+JavaFX is not included in OpenJDK8. In this case, the packages `openjfx` and `libopenjfx-java` are required in order to run this Java application.
